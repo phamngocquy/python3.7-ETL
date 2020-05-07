@@ -28,7 +28,7 @@ RUN apt-get -y update && \
     cd /usr/local/bin && \
     ln -s /usr/bin/python3 python && \
     pip3 install --upgrade pip && \
-    pip3 install pandas numpy sqlalchemy python-dotenv pysqlcopg2 PyMySQL && \
+    pip3 install pandas numpy sqlalchemy python-dotenv psycopg2 PyMySQL && \
     apt-get -y autoclean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt-get/lists/*
