@@ -24,16 +24,11 @@ RUN apt-get -y update && \
         libmysqlclient-dev \
         python3.7-dev \
 	libpq-dev \
-	python-psycopg2 \
-	pandas \
-	numpy \
-	sqlalchemy \
-	python-dotenv \
-	pysqlcopg2 \
-	PyMySQL && \
+	python-psycopg2 && \
     cd /usr/local/bin && \
     ln -s /usr/bin/python3 python && \
     pip3 install --upgrade pip && \
+    pip3 install pandas numpy sqlalchemy python-dotenv pysqlcopg2 PyMySQL && \
     apt-get -y autoclean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt-get/lists/*
